@@ -1,0 +1,13 @@
+{
+  "name": "jquery",
+  "version": "0.0.1",
+  "description": "Formation à jQuery",
+  "main": "index.js",
+  "author": "moi",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1"
+  }
+}

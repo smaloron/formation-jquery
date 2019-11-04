@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bouton</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body class="container-fluid">
+
+       <div class="row justify-content-center">
+           <button class="btn btn-primary m-4 col-4 btn-block">Cliquez moi</button>
+       </div>
+    
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            var nbClick = 0;
+            $("button").click(function(){
+                nbClick++;
+                var message = "Je suis cliqué";
+                if(nbClick >3){
+                    message = "Foutez moi la paix";
+                    $(this).attr("disabled", "disabled");
+                }
+                $(this) .text(message)
+                        .removeClass("btn-primary")
+                        .addClass("btn-success");
+            })
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+

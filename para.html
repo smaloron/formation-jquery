@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Paragraphes dynamiques</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        h2 {
+            cursor: pointer;
+        }
+        
+        .open {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="p-4">
+
+    <h2>Premier titre</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem iure sint nesciunt saepe accusamus facilis quia, id suscipit quis a dicta doloribus, error dolorum quisquam aperiam, ut amet cum facere.</p>
+
+    <h2>Deuxième titre</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem iure sint nesciunt saepe accusamus facilis quia, id suscipit quis a dicta doloribus, error dolorum quisquam aperiam, ut amet cum facere.</p>
+
+    <h2>Troisième titre</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem iure sint nesciunt saepe accusamus facilis quia, id suscipit quis a dicta doloribus, error dolorum quisquam aperiam, ut amet cum facere.</p>
+
+
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        
+    <script>
+        $(document).ready(function(){
+            $titres = $("h2");
+            $para = $("p");
+            
+            $para.hide();
+            
+            $titres.click(function(){
+                $para.hide(200);
+                $titres.removeClass("open");
+                $(this).next("p").toggle(500);
+                $(this).toggleClass("open");
+            });
+        });
+        
+    </script>
+
+</body>
+
+</html>
