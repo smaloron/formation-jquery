@@ -5,11 +5,17 @@
     <meta charset="UTF-8">
     <title>Menu</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    
+    <style>
+        #menu a {
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body class="container-fluid">
 
-    <ul>
+    <ul id="menu">
         <li>
             <a>Fruits</a>
             <ul>
@@ -24,7 +30,15 @@
                 <li>
                     <a>Racines</a>
                     <ul>
-                        <li>Carottes</li>
+                        <li>
+                            <a>Carottes</a>
+                            <ul>
+                                <li>orange</li>
+                                <li>jaunes</li>
+                                <li>blanches</li>
+                                <li>noires</li>
+                            </ul>
+                        </li>
                         <li>Panais</li>
                         <li>Pommes de terre</li>
                     </ul>
@@ -46,19 +60,33 @@
                 <li>fèves</li>
             </ul>
         </li>
+        <li>
+            <a>Huiles</a>
+            <ul>
+                <li>de noix</li>
+                <li>d'olive</li>
+                <li>de colza</li>
+            </ul>
+        </li>
     </ul>
-    
+
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
 
     <script>
-        $(document).ready(function(){
+        $(document).ready(function() {
+            //$("ul").not("#menu").hide();
             
+            $("#menu a").click(function(){
+                $(this).next("ul").toggle(250);
+            });
         });
     </script>
 </body>
 
 </html>
+
+
 
 
 
