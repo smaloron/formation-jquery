@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>formulaire</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    
+    <script >
+        $(document).ready(function(){
+            //Capture de l'événement d'envoi du formulaire
+            $("#form").submit(function(event){
+                event.preventDefault();
+                //Récupération de la saisie
+                var title = $("#title").val();
+                
+                console.log(title);
+            })
+        });
+    </script>
+    
+</head>
+<body class="container-fluid">
+   <div class="row justify-content-center">
+       <div class="col-md-6">
+           <form method="post" id="form">
+               <div class="form-group">
+                   <label for="title">Titre</label>
+                   <input type="text" id="title" class="form-control">
+               </div>
+               
+               <button class="btn btn-primary btn-block" type="submit">Valider</button>
+           </form>
+       </div>
+   </div>
+    
+    
+</body>
+</html>
